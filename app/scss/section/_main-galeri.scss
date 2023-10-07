@@ -1,0 +1,59 @@
+@use "base";
+@use "abstract" as *;
+
+.galeri {
+
+  
+  &__left-box {
+    max-width: 638px;
+    width: 100%;
+  }
+
+  &__left-img-top {
+    margin-bottom: 13px;
+  }
+
+  &__left-box-img-bottom {
+    position: relative;
+  }
+
+  &__left-box-img-bottom::after {
+    content: "";
+    max-width: 638px;
+    width: 100%;
+    // max-height: 422px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(39, 48, 41, 0.7);
+    opacity: 0.5;
+    position: absolute;
+  }
+
+  &__button {
+    position: absolute;
+    top: 185px;
+    left: 165px;
+    z-index: 1;
+  }
+
+  &__right-box {
+    max-width: 638px;
+    width: 100%;
+    margin-bottom: 164px;
+
+  }
+
+  &__right-content {
+    padding: 76px 10px 97px 49px;
+  }
+
+  &__title {
+    margin-bottom: 52px;
+  }
+
+  &__discr {
+    max-width: 548px;
+    width: 1005;
+  }
+}

@@ -1,0 +1,67 @@
+@use "base";
+@use "abstract" as *;
+
+.questions {
+  &__content-box {
+    flex-direction: column;
+  }
+
+  &__title-min {
+    margin-bottom: 22px;
+  }
+
+  &__title-top {
+    margin-bottom: 64px;
+  }
+
+  &__button {
+    margin-bottom: -30px;
+  }
+
+  &__bg-box {
+    height: 480px;
+    background-color: $bg-gray;
+  }
+
+  &__box {
+    background-color: white;
+    box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.09);
+    padding: 90px 122px;
+    margin-top: -340px;
+  }
+
+  &__list-content {
+    margin-bottom: 44px;
+  }
+
+  &__border-bottom {
+    display: block;
+    max-width: 352px;
+    width: 100%;
+    height: 2px;
+    background-color: $bg-gray;
+    margin-left: 49px;
+    margin-bottom: 44px;
+  }
+
+  &__icon {
+    color: #959595;
+    font-size: 24px;
+  }
+
+  &__link {
+    margin-left: 25px;
+    // color: ;
+  }
+
+  &__logo {
+    max-width: 248px;
+    width: 100%;
+    height: 122px;
+  }
+
+  &__list {
+    max-width: 636px;
+    width: 100%;
+  }
+}

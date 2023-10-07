@@ -1,0 +1,43 @@
+@use 'base';
+@use 'abstract' as *;
+
+.nav {
+
+  margin-top: 100px;
+  margin-bottom: 123px;
+  
+  
+  &__logo{
+    display: block;
+    width: 48px;
+    height: 69px;
+  }
+
+  &__right-link{
+    padding: 0 120px;
+    font-family: $F-rBold;
+  }
+
+  &__icon{
+    padding: 15px 20px;
+    background-color: $color-green;
+    font-size: 25px;
+    color: $bg-body;
+  }
+  
+}
+
+.nav::after{
+  content: '';
+  max-width: 254px;
+  width: 100%;
+  max-height: 648px;
+  height: 100%;
+  background-image: url(../../images/main-bg-top.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+

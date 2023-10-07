@@ -1,0 +1,60 @@
+
+@use 'base';
+@use 'abstract' as *;
+
+.title{
+    font-family:$F-rBold;
+    font-size: 64px;
+    line-height: 61px;
+    color: var(--color-black);
+}
+
+.title_brown{
+    font-family: $F-rBold;
+    font-size: 64px;
+    line-height: 61px;
+    color: var(--color-brown);
+}
+
+.title_green{
+    font-family: $F-rBold;
+    font-size: 64px;
+    line-height: 61px;
+    color: $color-green;
+}
+
+.title-green-min{
+    font-family: $F-rBold;
+    font-size: 20px;
+    line-height: 19px;
+    color: $color-green;
+    text-transform: uppercase;
+}
+
+.discr{
+    font-family: var(--F-rMedium);
+    font-size: 18px;
+    line-height: 31px;
+    color: var(--color-description);
+}
+
+.discr_grin{
+    font-family: var(--F-rMedium);
+    font-size: 18px;
+    line-height: 31px;
+    color: $color-green;
+}
+
+.link{
+    font-family: $F-rMedium;
+    font-size: 24px;
+    line-height: 28px;
+    color: $color-black;
+}
+
+.footer-title{
+    font-family: $F-rMedium;
+    font-size: 32px;
+    line-height: 30px;
+    color: $color-black;
+}

@@ -1,0 +1,151 @@
+@use "base";
+@use "abstract" as *;
+
+.product {
+  position: relative;
+
+  &__top-content {
+    max-width: 1016px;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    row-gap: 30px;
+    margin: 0 auto;
+    margin-bottom: 68px;
+  }
+
+  &__top-title-box {
+    column-gap: 20px;
+  }
+
+  &__images {
+    margin-bottom: 173px;
+  }
+
+  &__images::after {
+    content: "";
+    max-width: 254px;
+    width: 100%;
+    max-height: 648px;
+    height: 100%;
+    background-image: url(../../images/main-block-3-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 460px;
+    right: 0px;
+  }
+
+  &__img-box {
+    flex-direction: column;
+    row-gap: 52px;
+  }
+
+  &__link {
+    max-width: 221px;
+    width: 100%;
+    text-align: center;
+    line-height: 21px;
+  }
+
+  &__video {
+    column-gap: 60px;
+    position: relative;
+    margin-bottom: 230px;
+  }
+
+  &__left-content {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  &__video-title-green {
+    margin-bottom: 45px;
+  }
+
+  &__list-box {
+    margin-top: 79px;
+  }
+
+  &__lists {
+    padding: 0;
+    flex-direction: column;
+    row-gap: 23px;
+  }
+
+  &__list {
+    flex-direction: column;
+    row-gap: 23px;
+    max-width: 521px;
+    width: 100%;
+  }
+
+  &__lest-number {
+    width: 47px;
+    height: 47px;
+    margin-right: 22px;
+    padding: 12px;
+    background-color: $color-brown;
+    border-radius: 50%;
+    text-align: center;
+    font-family: $F-rBold;
+    font-size: 20px;
+    line-height: 23px;
+    color: $bg-body;
+  }
+
+  &__link-box {
+    align-items: center;
+    // flex-direction: column;
+    // padding-top: 40px;
+    max-width: 411px;
+    width: 100%;
+    // border-bottom: solid 2px $bg-gray;
+  }
+
+  &__list-link {
+    font-family: $F-rMedium;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-description;
+  }
+
+  &__list-border-bottom {
+    width: 411px;
+    height: 2px;
+    background-color: $bg-gray;
+    margin-left: 69px;
+  }
+
+  &__video-box {
+    // max-width: 620px;
+    width: 100%;
+  }
+
+  &__play-icon {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 320px;
+    left: 560px;
+    font-size: 64px;
+    padding: 13px 28px;
+    background-color: $color-green;
+    color: $bg-body;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+
+  &__play-icon::before {
+    content: "";
+    position: absolute;
+    width: 158px;
+    height: 158px;
+    top: -19px;
+    left: -19px;
+    background-color: $color-green;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: -1;
+  }
+}

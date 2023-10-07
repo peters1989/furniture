@@ -1,26 +1,17 @@
-const {
-  src,
-  dest,
-  watch,
-  parallel,
-  series,
-} = require("gulp"); /* parallel функция одновременного запуска wathc и browsersinc слежения и авто обновления браузера 
+const { src,dest, watch,parallel,series,} = require("gulp"); /* parallel функция одновременного запуска wathc и browsersinc слежения и авто обновления браузера 
                                                                  series следит за последовательностью выполнения функций*/
 
 const scss = require("gulp-sass")(require("sass")); /* плагин sass */
 const concat = require("gulp-concat"); /* обединение и переименовка файлов  */
 const uglify = require("gulp-uglify-es").default; /* минификация js файлов */
-const browserSync =
-  require("browser-sync").create(); /* авто обновление браузера */
+const browserSync = require("browser-sync").create(); /* авто обновление браузера */
 const autoprefixer = require("gulp-autoprefixer"); /* авто изменение под различные версии браузеров */
 const clean = require("gulp-clean");
 
 function styles() {
   /* функция берет файл scss и преобразует в файл css в папке dist */
   return src("app/scss/style.scss")
-    .pipe(
-      autoprefixer({ overrideBrowserslist: ["last 10 version"] })
-    ) /* авто изменение под различные версии браузеров */
+    .pipe(autoprefixer({ overrideBrowserslist: ["last 10 version"] })) /* авто изменение под различные версии браузеров */
     .pipe(concat("style.min.css")) /* переименовка файлов с помощб concat */
     .pipe(scss({ outputStyle: "compressed" })) /* минификация css */
     .pipe(dest("app/css")) /* создаем и помещаем  готовый файл в папку dist */
@@ -38,7 +29,7 @@ function scripts() {
 
 function watching() {
   /* функция сторож авто запуск функций js и style и html */
-  watch(["app/scss/style.scss"], styles);
+  watch(["app/scss/**/*.scss"], styles);
   watch(["app/js/main.js"], scripts);
   watch(["app/*.html"]).on("change", browserSync.reload);
 }

@@ -1,0 +1,57 @@
+@use 'base';
+@use 'abstract' as *;
+
+.footer{
+
+    padding-top: 128px;
+    padding-bottom: 51px;
+    position: relative;
+
+    &__content{
+        max-width: 308px;
+        width: 100%;
+        margin-right: 144px;
+    }
+    &__title-content{
+        text-transform: uppercase;
+        margin-bottom: 26px;
+    }
+
+    &__discr{
+        margin-bottom: 89px;
+    }
+
+    &__links{
+        flex-direction: column;
+        row-gap: 31px;
+        margin-right: 132px;
+    }
+
+    &__title{
+        margin-bottom: -5px;
+    }
+
+    &__link{
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    &__contact{
+        flex-direction: column;
+        row-gap: 31px;
+    }
+
+    &__contact::after{
+        content: '';
+        max-width: 568px;
+        width: 100%;
+        max-height: 534px;
+        height: 100%;
+        background-image: url(../../images/footer-bg-flower.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
